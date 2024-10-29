@@ -96,6 +96,10 @@ button {
     background-color: #222222;
 }
 
+.icon_menu{
+    
+}
+
 .background {
     display: flex;
     gap: 63.42px;
@@ -442,15 +446,29 @@ button {
 .footer__right{
     padding-top: 24px;
     padding-bottom: 24px;
-    justify-content: flex-end
+    display: flex;
+    justify-content: flex-end;
+    gap: 7.29px
 }
 
 .footer__btn{
+    width: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: center;
     background-color: #FFFFFF;
-    color: #000000;
     transition: background-color .3s;
     border: none;
     outline: none;
+}
+
+.footer__btn:hover {
+    background-color: #F16D7F;
+}
+
+.footer__btn:hover .footer__icon {
+    filter: invert(1);
 }
 
 @media (max-width: 1024px){
@@ -601,11 +619,11 @@ button {
         margin-right: 25px;
     }
 
-    .icon2{
+    .icon_lk{
         display: none;
     }
 
-    .icon3{
+    .icon_basket{
         display: none;
     }
 
@@ -686,7 +704,6 @@ button {
         padding-bottom: 110px;
         padding-left: calc(50% - 171.5px);
         padding-right: calc(50% - 171.5px);
-    }
     }
 
     .subscribe__info{}
