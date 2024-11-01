@@ -52,7 +52,7 @@ img {
 button {
     border: none;
     cursor: pointer;
-    /* outline: none; */
+    outline: none;
 }
 
 .container{
@@ -153,35 +153,35 @@ button {
 }
 
 
-.background {
+.top-head {
     display: flex;
     gap: 63.42px;
     background-color: #F1E4E6;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.background__img {
+.top-head__img {
     max-width: 764px;
 }
-.background__info {
+.top-head__info {
     padding-top: 290px;
     display: flex;
     align-items: center;
 }
 
-.background__text-head {
+.top-head__text-head {
     font-family: 'Lato-Black';
     font-size: 48px;
     color: #222222;
 }
-.background__text-down {
+.top-head__text-down {
     display: flex;
     font-family: 'Lato-Bold';
     font-size: 32px;
     color: #222222;
     gap: 5px;
 }
-.background__text--down_pink {
+.top-head__text--down_pink {
     color: #F16D7F;
 }
 .offer {
@@ -542,24 +542,24 @@ button {
         gap: 25px;
     }
 
-    .background{
+    .top-head{
         gap: 39px;
     }
 
-    .background__img {
+    .top-head__img {
         max-width: 386px;
     }
 
-    .background__info{
+    .top-head__info{
         padding-top: 138px;
         gap: 16px;
     }
 
-    .background__text-head{
+    .top-head__text-head{
         font-size: 44px;
     }
 
-    .background__text-down{
+    .top-head__text-down{
         font-size: 24px;
     }
 
@@ -601,10 +601,6 @@ button {
         flex-direction: column;
     }
 
-    .subscribe img{
-
-    }
-
     .subscribe{
         padding-top: 64px;
         padding-bottom: 140px;
@@ -618,42 +614,6 @@ button {
     .subscribe__left{
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    .subscribe__info{}
-
-    .subscribe__info_img{}
-
-    .subscribe__info_text{}
-
-    .subscribe__form{
-
-    }
-
-    .subscribe__form_title{}
-
-    .subscribe__form_text{}
-
-    .subscribe__form_form{}
-
-    .subscribe__form_input{}
-
-    .subscribe__form_btn{}
-
-    .footer{
-
-    }
-    
-    .footer__text{
-
-    }
-    
-    .footer__rigth{
-
-    }
-    
-    .footer__btn{
-
     }
 }
 
@@ -689,31 +649,31 @@ button {
         display: none;
     }
 
-    .background{
+    .top-head{
         justify-content: center;
         align-items: center;
     }
 
-    .background__img{
+    .top-head__img{
         display: none;
     }
 
-    .background__info{
+    .top-head__info{
         gap: 15px;
         padding-bottom: 148px;
     }
 
-    .background__text{
+    .top-head__text{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .background__text-head{
+    .top-head__text-head{
         font-size: 38px;
     }
 
-    .background__text-down{
+    .top-head__text-down{
         font-size: 20px;
     }
 
@@ -768,37 +728,7 @@ button {
         padding-right: calc(50% - 171.5px);
     }
 
-    .subscribe__info{}
-
-    .subscribe__info_img{}
-
-    .subscribe__info_text{}
-
-    .subscribe__form{}
-
-    .subscribe__form_title{}
-
-    .subscribe__form_text{}
-
-    .subscribe__form_form{}
-
-    .subscribe__form_input{}
-
-    .subscribe__form_btn{}
-
     .footer{
         flex-direction: column-reverse;
-    }
-    
-    .footer__text{
-
-    }
-    
-    .footer__rigth{
-
-    }
-    
-    .footer__btn{
-
     }
 }
