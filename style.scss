@@ -31,6 +31,10 @@ button {
     outline: none;
 }
 
+link {
+    text-decoration: none;
+}
+
 .container{
     margin: 0 auto;
     max-width: $widthSite;
@@ -212,6 +216,7 @@ button {
         padding-left: 16px;
         position: absolute;
         z-index: 1;
+        width: 360px;
     }
 
     &[open] {
@@ -284,6 +289,12 @@ button {
 
 .sort {
     padding-top: 12px;
+    display: flex;
+    gap: 18px;
+
+    &__details {
+        position: relative;
+    }
 
     &__summary {
         display: flex;
@@ -297,6 +308,31 @@ button {
         font-size: 14px;
         line-height: 17px;
         color: #6f6e6e;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        left: -9px;
+        top: 22px;
+    }
+
+    &__check {
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: #6F6E6E;
     }
 }
 
@@ -752,6 +788,32 @@ button {
     .btn_product:hover{
         background-color: $colorSelectSite;
         color: #FFFFFF;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 12px 16px;
+    margin-top: 48px;
+    margin-bottom: 96px;
+    width: 284px;
+    height: 44px;
+    border: 1px solid rgb(196, 196, 196);
+    box-sizing: border-box;
+
+    &__link {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0%;
+        text-align: left;
+        color: rgb(196, 196, 196);
+
+        &__active {
+            color: $colorSelectSite;
+        }
     }
 }
 
