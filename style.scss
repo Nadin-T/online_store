@@ -1,7 +1,6 @@
 @import 'fonts';
 @import 'vars';
-
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -11,7 +10,7 @@
 summary {
     display: block;
 }
-    
+
 summary::-webkit-details-marker {
     display: none;
 }
@@ -36,7 +35,7 @@ a {
     text-decoration: none;
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: $widthSite;
     position: relative;
@@ -51,15 +50,14 @@ a {
     color: $colorSelectSite;
 }
 
-.header{
+.header {
     height: 75px;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
     gap: 859px;
     background-color: $colorBackDark;
-
-    &-left{
+    &-left {
         padding-top: 18px;
         padding-bottom: 18px;
         display: flex;
@@ -67,64 +65,61 @@ a {
         align-items: center;
         gap: 41px;
     }
-
-    &-right{
+    &-right {
         padding-top: 26px;
         padding-bottom: 20px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         gap: 30px;
-
         .icon {
             background-color: $colorBackDark;
         }
-
         .dropdown {
-            display: none; /* Скрыть по умолчанию */
+            display: none;
+            /* Скрыть по умолчанию */
             position: absolute;
             top: 75px;
             right: 0;
-            background-color: #FFFFFF; /* Цвет фона */
-            border: 1px solid #ddd; /* Граница */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень */
-            z-index: 1000; /* По необходимости */
-
+            background-color: #FFFFFF;
+            /* Цвет фона */
+            border: 1px solid #ddd;
+            /* Граница */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Тень */
+            z-index: 1000;
+            /* По необходимости */
             &-content {
                 padding-left: 33px;
                 padding-bottom: 32px;
                 width: 232px;
-
-                &__head{
+                &__head {
                     padding-top: 32px;
                     padding-bottom: 4px;
                     font-family: 'Lato-Bold';
                     font-size: 14px;
                     color: #000000;
                 }
-
                 &__link {
                     color: #6F6E6E;
                 }
-                
-                &__box{
+                &__box {
                     padding-top: 20px;
-
-                    &-title{
+                    &-title {
                         font-family: 'Lato-Regular';
                         font-size: 14px;
                         color: $colorSelectSite;
                     }
-
                     & ul {
-                        list-style-type: none; /* Убрать маркеры списка */
+                        list-style-type: none;
+                        /* Убрать маркеры списка */
                         padding: 0;
                         padding-left: 21.5px;
                         margin: 0;
                         gap: 11px;
-        
                         & li {
-                            padding: 0; /* Отступы для элементов списка */
+                            padding: 0;
+                            /* Отступы для элементов списка */
                             font-family: 'Lato-Regular';
                             font-size: 14px;
                             padding-top: 11px;
@@ -133,10 +128,10 @@ a {
                 }
             }
         }
-
-        .icon-menu:hover +  .dropdown,
+        .icon-menu:hover+.dropdown,
         .dropdown:hover {
-        display: block; /* Отобразить меню при наведении */
+            display: block;
+            /* Отобразить меню при наведении */
         }
     }
 }
@@ -153,9 +148,170 @@ a {
     }
 }
 
-.shopping-cart__top-head {
-    padding: 60px 0;
-    background-color: #F8F3F4;
+.cart {
+    padding-top: 96px;
+    padding-bottom: 128px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    &-item {
+        display: flex;
+        width: 652px;
+        height: 306px;
+        position: relative;
+        box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+        &__content {
+            width: 100%;
+            background-color: #fff;
+            padding: 22px 32px;
+            box-sizing: border-box;
+        }
+        &__link {
+            font-family: 'Lato-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            color: $backBlock;
+            margin-bottom: 42px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &__close {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+            &:hover path {
+                fill: $colorSelectSite;
+            }
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 42px;
+        }
+        &__text {
+            font-family: 'Lato-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            color: #575757;
+            &_select {
+                color: $colorSelectSite;
+            }
+            &_quantity {
+                display: flex;
+                gap: 32px;
+            }
+        }
+        &__number {
+            width: 44px;
+            height: 25px;
+            font-family: 'Lato-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #656565;
+            text-align: center;
+            border: 1px solid #EAEAEA;
+        }
+    }
+    &__heading {
+        font-family: 'Lato-Light';
+        font-weight: 300;
+        font-size: 16px;
+        color: #222;
+    }
+    &__form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid #A4A4A4;
+        font-family: 'Lato-Light';
+        font-weight: 300;
+        font-size: 13px;
+        color: #222;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+        outline: none;
+        &::placeholder {
+            color: #b1b1b1;
+        }
+    }
+    &__button {
+        border: 1px solid #A4A4A4;
+        padding: 12px 16px;
+        font-family: 'Lato-Light';
+        font-weight: 300;
+        font-size: 11px;
+        color: #4a4a4a;
+        background-color: #fff;
+        width: 110px;
+        &:hover {
+            color: white;
+            background-color: $colorSelectSite;
+        }
+        &_down {
+            min-width: 235px;
+            height: 50px;
+        }
+        &_total {
+            width: 273px;
+            height: 50px;
+        }
+    }
+    &__buttons-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__order {
+        display: flex;
+        flex-direction: column;
+    }
+    &__checkout {
+        margin-top: 57px;
+        padding-left: 42px;
+        padding-right: 42px;
+        width: 360px;
+        height: 214px;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        background-color: #F5F3F3;
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: right;
+        &-sub {
+            padding-top: 39px;
+            font-family: 'Lato-Regular';
+            font-weight: 400;
+            font-size: 11px;
+            color: #4a4a4a;
+        }
+        &-grand {
+            font-family: 'Lato-Light';
+            font-weight: 300;
+            font-size: 16px;
+            color: #222;
+        }
+    }
 }
 
 .breadcrumbs {
@@ -164,33 +320,42 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    background-color: #F8F3F4;
     &__title {
         font-family: 'Lato-Regular';
         font-weight: 400;
         font-size: 24px;
         color: $colorSelectSite;
     }
-
     &__navigation {
         display: flex;
-        gap: 2px;
         &-link {
             font-family: 'Lato-Light';
             font-weight: 300;
             font-size: 14px;
             line-height: 17px;
             color: #636363;
-            display: flex;
-            gap: 2px;
-
-            &_choice {
-                font-weight: 700;
+            &:hover {
                 color: $colorSelectSite;
             }
         }
+        &-box:last-of-type .breadcrumbs__navigation-link {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: $colorSelectSite;
+        }
+        &-box:not(:last-child)::after {
+            content: '/';
+            padding-left: 8px;
+            padding-right: 8px;
+            font-family: 'Lato-Light';
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+        }
     }
-
     &__link_site {
         font-weight: 700;
         color: $colorSelectSite;
@@ -212,7 +377,6 @@ a {
     box-sizing: border-box;
     position: relative;
     z-index: 10;
-
     &__content {
         background-color: #fff;
         padding-top: 0;
@@ -223,20 +387,16 @@ a {
         z-index: 1;
         width: 360px;
     }
-
     &[open] {
         background: #fff;
         box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
     }
-
     &[open] .filter__heading {
         color: $colorSelectSite;
     }
-
     &[open] path {
         fill: $colorSelectSite;
     }
-
     &__summary {
         display: flex;
         align-items: baseline;
@@ -251,11 +411,9 @@ a {
         line-height: 17px;
         color: $colorText;
     }
-
     &__item {
         margin-top: 16px;
     }
-
     &__head {
         font-family: 'Lato-Regular';
         font-style: normal;
@@ -267,18 +425,15 @@ a {
         border-bottom: 1px solid #EBEBEB;
         border-left: 5px solid $colorSelectSite;
     }
-
-    &__item[open] .filter__head{
+    &__item[open] .filter__head {
         color: $colorSelectSite;
     }
-
     &__link-box {
         display: flex;
         flex-direction: column;
         gap: 11px;
         padding: 24px 16px;
     }
-
     &__link {
         font-family: 'Lato-Regular';
         font-style: normal;
@@ -296,17 +451,14 @@ a {
     padding-top: 12px;
     display: flex;
     gap: 18px;
-
     &__details {
         position: relative;
     }
-
     &__summary {
         display: flex;
         align-items: center;
         gap: 10px;
     }
-
     &__heading {
         font-style: normal;
         font-weight: 400;
@@ -314,7 +466,6 @@ a {
         line-height: 17px;
         color: #6f6e6e;
     }
-
     &__box {
         display: flex;
         flex-direction: column;
@@ -326,7 +477,6 @@ a {
         left: -9px;
         top: 22px;
     }
-
     &__check {
         display: flex;
         gap: 9px;
@@ -347,23 +497,19 @@ a {
     background-color: #F1E4E6;
     justify-content: flex-start;
     align-items: flex-start;
-
     &__img {
         max-width: 800px;
     }
-
     &__info {
         padding-top: 290px;
         display: flex;
         gap: 16px;
-
         &_text {
             &-head {
                 font-family: 'Lato-Black';
                 font-size: 48px;
                 color: $colorBackDark;
             }
-    
             &-down {
                 display: flex;
                 font-family: 'Lato-Bold';
@@ -375,80 +521,6 @@ a {
     }
 }
 
-.shopping-cart {
-    &__box {
-        display: flex;
-        gap: 128px;
-        padding-top: 96px;
-        padding-bottom: 128px;
-    }
-
-    &__left {
-    }
-
-    &__button-delete {
-        width: 18px;
-        height: 18px;
-    }
-
-    &__cards-box {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    &__card {
-        display: flex;
-        width: 652px;
-        height: 306px;
-        gap: 31px;
-
-
-        &-img {
-            width: 306px;
-            
-        }
-
-        &-info {
-            width: 262px;
-        }
-
-        &-head {
-            font-family: 'Lato-Regular';
-            font-weight: 400;
-            font-size: 24px;
-            color: $backBlock;
-            text-align: left;
-        }
-
-        &-text {
-            padding-top: 42px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        &-price {}
-
-        &-color {}
-
-        &-size {}
-
-        &-quantity {}
-    }
-
-    &__button-box {}
-
-    &__button {}
-
-    &__right {}
-
-    &__input-box {
-        &-head {}
-    }
-}
-
-
 .offer {
     display: grid;
     justify-content: center;
@@ -456,7 +528,6 @@ a {
     grid-template-columns: repeat(3, 360px);
     padding-top: 65px;
     background-color: #fff;
-
     &__card {
         display: flex;
         max-width: 360px;
@@ -465,10 +536,8 @@ a {
         justify-content: center;
         align-content: center;
         align-items: center;
-
         &_info {
             position: absolute;
-
             &-text {
                 display: flex;
                 justify-content: center;
@@ -485,7 +554,6 @@ a {
             }
         }
     }
-
     &__card-big {
         max-width: 1140px;
         grid-column: span 3;
@@ -501,17 +569,14 @@ a {
         overflow: hidden;
         background-color: #F7F7F7;
     }
-
     &-box {
         display: flex;
         transition: transform 0.5s ease;
     }
-
     &-page {
         min-width: 100%;
         max-height: 777px;
     }
-
     &__carousel-button {
         background-color: #2A2A2A26;
         border: none;
@@ -522,7 +587,6 @@ a {
         transform: translateY(-50%);
         z-index: 1;
         font-weight: 900;
-
         &.left {
             left: 10px;
             color: #000000;
@@ -532,13 +596,13 @@ a {
             color: #000000;
         }
     }
-
     &__carousel-button:hover {
         color: $colorSelectSite;
     }
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -557,8 +621,9 @@ a {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .capsule-info {
@@ -567,7 +632,8 @@ a {
     max-width: 1140px;
     position: absolute;
     margin-right: 293px;
-    margin-bottom: 64.5px;  margin-left: 293px;
+    margin-bottom: 64.5px;
+    margin-left: 293px;
     // margin-left: calc(50% - $widthCenter / 2);
     // margin-right: calc(50% - $widthCenter / 2);
     display: flex;
@@ -577,10 +643,7 @@ a {
     align-items: center;
     align-content: center;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
-    
-
     &__text-box {
-
         padding-top: 64.5px;
         display: flex;
         flex-direction: column;
@@ -595,19 +658,16 @@ a {
         width: 640px;
         box-sizing: border-box;
     }
-
-    &__heading-select{
+    &__heading-select {
         font-family: 'Lato-Light';
         font-style: normal;
         color: $colorSelectSite;
         font-weight: 300;
         font-size: 14px;
     }
-
     &__divider {
         margin: 12px auto;
     }
-
     &__heading {
         font-family: 'Lato-Light';
         font-style: normal;
@@ -615,7 +675,6 @@ a {
         font-size: 18px;
         color: #4d4d4d;
     }
-
     &__text {
         padding-top: 48px;
         font-family: 'Lato-Light';
@@ -625,33 +684,28 @@ a {
         text-align: center;
         color: #5e5e5e;
     }
-
     &__price {
         margin-top: 32px;
         color: $colorSelectSite;
         font-weight: 400;
         font-size: 24px;
     }
-
     &__filter-box {
         padding-top: 64.5px;
         padding-bottom: 48.4px;
         display: flex;
         gap: 23px;
     }
-
     &__filter {
         display: flex;
         gap: 9px;
         align-items: center;
     }
-
     &__filter-heading {
         font-weight: 400;
         font-size: 14px;
         color: #6f6e6e;
     }
-
     &__button {
         margin-bottom: 64.5px;
         display: flex;
@@ -666,21 +720,17 @@ a {
         background-color: #FFFFFF;
         color: $colorSelectSite;
         gap: 23px;
-
         &-svg {
             fill: $colorSelectSite;
         }
-
-        &:hover svg{
+        &:hover svg {
             fill: #FFFFFF;
         }
-
         &:hover {
             background-color: $colorSelectSite;
             color: #FFFFFF;
         }
     }
-
 }
 
 .products {
@@ -690,31 +740,25 @@ a {
     align-items: center;
     padding-top: 96px;
     background-color: #fff;
-
     &-prod {
         margin-top: 664px;
         margin-bottom: 128px;
     }
-
     &-title {
         display: flex;
         justify-content: center;
-    
         font-family: 'Lato-Regular';
         font-size: 30px;
         color: $colorBackDark;
     }
-
     &-text {
         display: flex;
         justify-content: center;
         padding-top: 6px;
-    
         font-family: 'Lato-Regular';
         font-size: 14px;
         color: #9F9F9F;
     }
-
     &__cards {
         padding-top: 48px;
         display: grid;
@@ -722,32 +766,26 @@ a {
         gap: 30px;
         grid-template-columns: repeat(3, 360px);
         color: $colorCard;
-
         .product__card {
-            .product__img-container{
+            .product__img-container {
                 position: relative;
                 /* width: max-content; */
             }
-            
-            .product__card_img{
+            .product__card_img {
                 display: block;
             }
-            
-            .hover-image{
+            .hover-image {
                 position: absolute;
                 top: 0;
                 left: 0;
                 display: none;
                 width: 100%;
                 height: auto;
-
             }
-            
             .product__img-container:hover .hover-image {
                 display: block;
                 cursor: pointer;
             }
-            
             .product__card_title {
                 padding-top: 25px;
                 margin-left: 16px;
@@ -755,7 +793,6 @@ a {
                 font-size: 13px;
                 color: #000000;
             }
-
             .product__card_text {
                 padding-top: 16px;
                 margin-left: 16px;
@@ -764,7 +801,6 @@ a {
                 font-size: 14px;
                 color: #5D5D5D;
             }
-
             .product__card_price {
                 padding-top: 16px;
                 margin-left: 16px;
@@ -774,7 +810,6 @@ a {
             }
         }
     }
-    
     .btn_product {
         margin-top: 49px;
         margin-bottom: 95px;
@@ -789,8 +824,7 @@ a {
         font-size: 16px;
         color: #F26376;
     }
-    
-    .btn_product:hover{
+    .btn_product:hover {
         background-color: $colorSelectSite;
         color: #FFFFFF;
     }
@@ -807,7 +841,6 @@ a {
     height: 44px;
     border: 1px solid rgb(196, 196, 196);
     box-sizing: border-box;
-
     &__link {
         font-size: 16px;
         font-weight: 300;
@@ -816,26 +849,98 @@ a {
         text-align: left;
         color: rgb(196, 196, 196);
     }
-
     &__active {
         color: $colorSelectSite;
     }
 }
 
-.feature{
+.registrtation {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    gap: 128px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-heading {
+            font-family: $textSelectLite;
+            font-weight: 300;
+            font-size: 16px;
+            color: #222;
+        }
+    }
+    &__input {
+        width: 360px;
+        height: 45px;
+        padding: 13px 18px;
+        font-family: "Lato-Light";
+        font-weight: 300;
+        font-size: 13px;
+        color: #b1b1b1;
+        &-text {
+            font-weight: 300;
+            font-size: 13px;
+            color: #b1b1b1;
+        }
+    }
+    &__button {
+        width: 167px;
+        height: 50px;
+        &-arrow {
+            margin-left: 20px;
+            fill: white;
+            &:hover {
+                fill: $colorSelectSite;
+            }
+        }
+    }
+    &__radio {
+        display: flex;
+        gap: 10px;
+        font-family: "Lato-Light";
+        font-weight: 300;
+        font-size: 11px;
+        color: #000;
+    }
+    &__content {
+        max-width: 652px;
+        font-family: "Lato-Light";
+        font-weight: 300;
+        font-size: 24px;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    &__heading {
+        font-family: "Lato-Light";
+        font-weight: 300;
+        font-size: 24px;
+        color: #000;
+    }
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__li {
+        list-style: none;
+    }
+}
+
+.feature {
     padding-top: 104px;
     padding-bottom: 104px;
     background-color: $backBlock;
     display: flex;
     justify-content: center;
-
-    &__content{
+    &__content {
         display: grid;
         justify-content: center;
         gap: 30px;
         grid-template-columns: repeat(3, 360px);
-
-        .feature__card{
+        .feature__card {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -843,25 +948,21 @@ a {
             max-width: 320px;
             margin-left: calc(50% - 160px);
             margin-right: calc(50% - 160px);
-
-            .feature__img{
+            .feature__img {
                 align-items: start;
             }
-            
-            .feature__info{
+            .feature__info {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 text-align: center;
                 color: #FBFBFB;
-
-                .feature__info_head{
+                .feature__info_head {
                     font-family: "Lato-Regular";
                     font-size: 20px;
                     padding-top: 28px;
                     font-weight: normal;
                 }
-                
                 .feature__info_text {
                     font-family: "Lato-Light";
                     font-size: 14px;
@@ -872,7 +973,7 @@ a {
     }
 }
 
-.subscribe{
+.subscribe {
     background-image: url(img/subscribe/back.svg);
     background-size: cover;
     background-position: left center;
@@ -882,8 +983,7 @@ a {
     gap: 223.26px;
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
-
-    &-left{
+    &-left {
         margin-top: 97px;
         margin-bottom: 126px;
         max-width: 360px;
@@ -893,50 +993,42 @@ a {
         align-content: center;
         justify-content: center;
         align-items: center;
-
-        &__info{
+        &__info {
             max-width: 360px;
             max-height: 225px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
-        &__info-img{
+        &__info-img {
             max-width: 96px;
         }
-        
-        &__info-text{
+        &__info-text {
             padding-top: 30px;
             font-family: 'Lato-Regular';
             font-size: 20px;
             text-align: center;
         }
-        
         &__info-text-italics {
             font-family: 'Lato-Italic';
             font-size: 20px;
         }
     }
-    
     &-right {
         max-width: 557px;
         text-align: center;
-
-        &__title{
+        &__title {
             font-family: 'Lato-Bold';
             font-size: 24px;
             color: $backBlock;
         }
-        
-        &__text{
+        &__text {
             margin-top: 8px;
             font-family: 'Lato-Regular';
             font-size: 18px;
             color: $backBlock;
         }
-
-        &__input{
+        &__input {
             display: flex;
             align-items: center;
             margin-top: 32px;
@@ -950,17 +1042,16 @@ a {
             border: none;
             outline: none;
             box-shadow: none;
-
-            .input{
+            .input {
                 border: none;
                 width: 100%;
                 border-radius: 25px 0 0 25px;
                 background-color: #E1E1E1;
-                margin-left: 22px;    outline: none;
+                margin-left: 22px;
+                outline: none;
                 caret-color: transparent;
             }
-            
-            .subscribe__form_btn{
+            .subscribe__form_btn {
                 padding-left: 18px;
                 padding-right: 18px;
                 width: 100px;
@@ -973,33 +1064,28 @@ a {
                 border-bottom-right-radius: 25px;
             }
         }
-
-        }
-    
+    }
 }
 
-.footer{
+.footer {
     background-color: $backBlock;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-
-    &__text{
+    &__text {
         padding-top: 30px;
         padding-bottom: 30px;
         font-family: 'Lato-Regular';
         font-size: 16px;
         color: #FBFBFB;
     }
-    
-    &__right{
+    &__right {
         padding-top: 24px;
         padding-bottom: 24px;
         display: flex;
         justify-content: flex-end;
         gap: 7.29px;
-
         .footer__btn {
             width: 32px;
             padding-top: 8px;
@@ -1011,103 +1097,98 @@ a {
             border: none;
             outline: none;
         }
-        
         .footer__btn:hover {
             background-color: $colorSelectSite;
         }
-        
         .footer__btn:hover .footer__icon {
             filter: invert(1);
         }
     }
 }
 
-@media (min-width: 1025px){
+.button_select {
+    background-color: $colorSelectSite;
+    color: #FFFFFF;
+    &:hover {
+        background-color: #FFFFFF;
+        color: $colorSelectSite;
+        border: 1px solid $colorSelectSite;
+    }
+    // & svg:hover {
+    //     color: $colorSelectSite;
+    // }
+}
+
+@media (min-width: 1025px) {
     .dropdown {
         right: calc(50% - 570px);
     }
 }
 
-@media (max-width: 1024px){
-    .center{
+@media (max-width: 1024px) {
+    .center {
         padding-left: calc(50% - 368px);
         padding-right: calc(50% - 368px);
     }
-
-    .header{
+    .header {
         gap: 424px;
         display: flex;
         justify-content: space-around;
-
-        &-right{
+        &-right {
             gap: 25px;
         }
     }
-
-    .top-head{
+    .top-head {
         gap: 39px;
-
         &__img {
             max-width: 386px;
         }
-    
-        &__info{
+        &__info {
             padding-top: 138px;
             gap: 16px;
-
             &_text {
-                &-head{
+                &-head {
                     font-size: 44px;
                 }
-            
-                &-down{
+                &-down {
                     font-size: 24px;
                 }
             }
         }
     }
-
-    .offer{
+    .offer {
         gap: 19px;
         grid-template-columns: repeat(3, 232px);
     }
-
-    .products{
+    .products {
         padding-top: 110px;
-
-        &__cards{
+        &__cards {
             padding-top: 73px;
             gap: 16px;
             grid-template-columns: repeat(2, 360px);
-
             .product__card {
-                .product__card_text{
+                .product__card_text {
                     padding-top: 12.65px;
                 }
-            
-                .product__card_price{
+                .product__card_price {
                     padding-top: 18px;
                 }
             }
         }
-
-        .btn_product{
+        .btn_product {
             margin-top: 32px;
             margin-bottom: 65px;
         }
     }
-
-    .feature{
+    .feature {
         padding-top: 48px;
         padding-bottom: 64px;
-
-        &__content{
+        &__content {
             display: flex;
             flex-direction: column;
         }
     }
-
-    .subscribe{
+    .subscribe {
         padding-top: 64px;
         padding-bottom: 140px;
         background-position: left 10%;
@@ -1115,130 +1196,106 @@ a {
         gap: 48px;
         padding-left: calc(50% - 205px);
         padding-right: calc(50% - 205px);
-
-        &-left{
+        &-left {
             margin-top: 0;
             margin-bottom: 0;
         }
     }
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-
-    .center{
+@media (min-width: 320px) and (max-width: 767px) {
+    .center {
         padding-left: calc(50% - 180px);
         padding-right: calc(50% - 180px);
     }
-
-    .header{
+    .header {
         gap: 200px;
-
-        &-left{
+        &-left {
             margin-left: 16px;
         }
-    
-        &-right{
+        &-right {
             margin-right: 25px;
-
-            .dropdown{
+            .dropdown {
                 width: 100%;
                 right: 0;
             }
-
-            .icon_lk{
+            .icon_lk {
                 display: none;
             }
-        
-            .icon_basket{
+            .icon_basket {
                 display: none;
             }
         }
     }
-
-    .top-head{
+    .top-head {
         justify-content: center;
         align-items: center;
-
         &__img {
             display: none;
         }
-    
-        &__info{
+        &__info {
             gap: 15px;
             padding-bottom: 148px;
-
             &_text {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
                 &-head {
                     font-size: 38px;
                 }
-            
                 &-down {
                     font-size: 20px;
                 }
             }
         }
     }
-
-    .offer{
+    .offer {
         padding-left: 16px;
         padding-right: 16px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 32px;
-
         &__card {
             &_info {
                 margin-top: 30px;
                 margin-bottom: 30px;
             }
         }
-
         &__card-big img {
             width: 343px;
             height: 111px;
             object-fit: cover;
             object-position: center;
         }
-    
         &__card-big {
             max-width: 343px;
             grid-column: span 1;
         }
     }
-
     .products {
-        &__cards{
+        &__cards {
             display: flex;
             flex-direction: column;
             max-width: 359px;
         }
-
-        &-text{
+        &-text {
             margin-left: 17px;
         }
-
-        .btn_product{
+        .btn_product {
             margin-top: 40px;
             margin-bottom: 96px;
         }
     }
-    
     .feature__info_text {
         padding-top: 15px;
     }
-
-    .subscribe{
+    .subscribe {
         padding-bottom: 110px;
         padding-left: calc(50% - 171.5px);
         padding-right: calc(50% - 171.5px);
     }
-
-    .footer{
+    .footer {
         flex-direction: column-reverse;
     }
 }
